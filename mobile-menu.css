@@ -1,0 +1,232 @@
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('font/TTLakes-Regular.eot');
+    src: local('TT Lakes Regular'), local('TTLakes-Regular'),
+        url('font/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+        url('font/TTLakes-Regular.woff') format('woff'),
+        url('font/TTLakes-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('font/TTLakes-Medium.eot');
+    src: local('TT Lakes Medium'), local('TTLakes-Medium'),
+        url('font/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
+        url('font/TTLakes-Medium.woff') format('woff'),
+        url('font/TTLakes-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('font/TTLakes-Bold.eot');
+    src: local('TT Lakes Bold'), local('TTLakes-Bold'),
+        url('font/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
+        url('font/TTLakes-Bold.woff') format('woff'),
+        url('font/TTLakes-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+* {font-family: 'TT Lakes';}
+p {margin: 0;}
+a {text-decoration: none;}
+button {background-color: #ffffff; border: none; padding: 0}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 320px;
+    height: 1024px;
+    box-shadow: 0 0 25px 10px rgba(14, 24, 80, 0.2);
+}
+
+.container {
+    box-sizing: border-box;
+    width: 320px;
+    padding: 0 24px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button {
+    width: 40px;
+    height: 40px;
+    background-color: #ff3e79;
+    border-radius: 50%;
+    position: relative;
+    filter: none;
+    transition-property: filter;
+    transition-duration: 0.5s;;
+}
+
+.button:hover {
+    filter: drop-shadow(0 0 5px #7E7E82);
+    transition-duration: 0.5s;
+}
+
+/* ----- header ----- */
+
+.header {
+    justify-content: flex-start;
+    height: 88px;
+}
+
+.header__burger {
+    margin-right: 17px;
+}
+
+.header__burger::before,
+.header__burger::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 2px;
+    background-color: #ffffff;
+}
+
+.header__burger::before {
+    transform: translate(-10.5px, -1px) rotate(45deg);
+}
+
+.header__burger::after {
+    transform: translate(-10.5px, -1px) rotate(-45deg);
+}
+
+.header__search {
+    margin-left: auto;
+}
+
+.header__search::before {
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    background: url("img/search.svg") no-repeat;
+    transform: translate(-8px, -9px);
+}
+
+/* ----- nav ----- */
+
+.nav__list {
+    margin: 0 0 264px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav__item {
+    margin: 24px 0;
+    height: 32px;
+    position: relative;
+}
+
+.nav__item a {
+    display: inline-block;
+    width: 100%;
+    padding: 4px 0; 
+    color: #1B1C21;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.nav__item.current a {
+    color: #7E7E82;
+}
+
+.nav__item.current::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -24px;
+    width: 4px;
+    height: 32px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #41F6D7;
+}
+
+/* ----- contact ----- */
+
+.contact {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 116px;
+}
+
+.contact__buttons {
+    width: 152px;
+}
+
+.contact__call::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    right: 11px;
+    bottom: 11px;
+    left: 11px;
+    width: 18px;
+    height: 18px;
+    background: url("img/call.svg") no-repeat;
+}
+
+.contact__chat::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    right: 10px;
+    bottom: 11px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    background: url("img/chat.svg") no-repeat;
+}
+
+.contact__profile::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    width: 20px;
+    height: 18px;
+    background: url("img/profile.svg") no-repeat;
+}
+
+.contact__e-mail {
+    color: #1B1C21;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+.contact__phone-number {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: bold;
+}
+
+/* ----- lang ----- */
+
+.lang {
+    width: 90px;
+    margin: 40px 0 32px 0;
+}
+
+.lang__item {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+.active {
+    color: #7E7E82;
+}
