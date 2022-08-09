@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="style.css">
     <title>CPS</title>
 </head>
@@ -68,8 +72,8 @@
                         <span>, что подтверждает большое количество постоянных клиентов. Мы гордимся 
                         тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</span>
                     </p>
-                    <div class="services__container-for-read-more">
-                        <button class="services__read-more">
+                    <div class="container-for-read-more">
+                        <button class="services__read-more read-more">
                             Читать далее
                         </button>
                     </div>
@@ -77,6 +81,34 @@
                 <img src="img/services.jpg" alt="Вывеска CPS" class="services__image">
             </div>
         </article>
+        <section class="brands">
+            <h3 class="brands__title title">Ремонт техники различных брендов</h2>
+            <div class="brands__swiper swiper" data-mobile="false">
+                <ul class="brands__list swiper-wrapper">
+                    <li class="brands__item swiper-slide"><a href="#"><img src="img/brands/len.svg" alt="Lenovo"></a></li>
+                    <li class="brands__item swiper-slide"><a href="#"><img src="img/brands/sam.svg" alt="Samsung"></a></li>
+                    <li class="brands__item swiper-slide"><a href="#"><img src="img/brands/app.svg" alt="Apple"></a></li>
+                    <li class="brands__item swiper-slide"><a href="#"><img src="img/brands/vs.svg" alt="ViewSonic"></a></li>
+                    <li class="brands__item swiper-slide"><a href="#"><img src="img/brands/bosch.svg" alt="Bosch"></a></li>
+                    <li class="brands__item swiper-slide"><a href="#"><img src="img/brands/hp.svg" alt="hp"></a></li>
+                    <li class="brands__item swiper-slide item-hidden"><a href="#"><img src="img/brands/acer.svg" alt="Acer"></a></li>
+                    <li class="brands__item swiper-slide item-hidden"><a href="#"><img src="img/brands/sony.svg" alt="Sony"></a></li>
+                    <li class="brands__item swiper-slide item-hidden"><a href="#"><img src="img/brands/len.svg" alt="Lenovo"></a></li>
+                    <li class="brands__item swiper-slide item-hidden"><a href="#"><img src="img/brands/sam.svg" alt="Samsung"></a></li>
+                    <li class="brands__item swiper-slide item-hidden"><a href="#"><img src="img/brands/app.svg" alt="Apple"></a></li>
+                </ul>
+                <div class="brands__swiper-pagination swiper-pagination"></div>
+            </div>
+            <div class="brands__container-for-show-more">
+                <button class="brands__show-more" id="brands__show-more">
+                    <img src="img/read-more.svg" alt="Показать все" class="brands__icon">
+                </button>
+                <label for="brands__show-more" class="label">Показать все</label>
+            </div>
+        </section>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="slider.js"></script>
+    <script src="read-more.js"></script>
 </body>
 </html>
