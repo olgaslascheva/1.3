@@ -5,9 +5,9 @@ let icon = showMore.querySelector('.brands__icon');
 console.log(label);
 
 showMore.addEventListener('click', function(){
+    icon.classList.toggle('icon--rotate');
     if (!showMore.classList.contains('active')) {
         label.textContent = 'Скрыть';
-        icon.classList.add('icon--rotate');
         showMore.classList.add('active');
 
         for (let i = 0; i < items.length; i++) {
@@ -16,7 +16,6 @@ showMore.addEventListener('click', function(){
     } else {
         label.textContent = 'Показать все';
         showMore.classList.remove('active');
-        icon.classList.remove('icon--rotate');
 
         for (let i = 0; i < items.length; i++) {
             items[i].classList.add('item-hidden');
