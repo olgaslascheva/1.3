@@ -12,11 +12,11 @@ function mobileSlider() {
             slidesPerView: 1.25,
             });
 
-        slider.dataset.mobile == 'true';
+        slider.dataset.mobile = 'true';
     }
 
     if (window.innerWidth > 600) {
-        slider.dataset.mobile == 'false';
+        slider.dataset.mobile = 'false';
 
         mySwiper.destroy();
     }
